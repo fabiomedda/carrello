@@ -50,8 +50,9 @@
 
         <div class="section content">
             <h1>Our Products</h1>
-        </div>
             <products-list></products-list>
+        </div>
+        <cart-dropdown></cart-dropdown>
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>

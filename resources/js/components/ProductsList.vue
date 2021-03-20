@@ -12,7 +12,10 @@
 
                 <td>${{ item.price.toFixed(2) }}</td>
 
-                <td>Add to Cart</td>
+                <td>
+                    <button class="button is-success"
+                        @click="addToCart(item)">Add to Cart</button>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -74,6 +77,11 @@ export default {
                     price: 6.00
                 },
             ]
+        }
+    },
+    methods: {
+        addToCart(item) {
+            this.$store.commit('addToCart', item);
         }
     }
 }
